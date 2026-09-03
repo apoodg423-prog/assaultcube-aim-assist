@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Models and large files
+*.pt
+*.pth
+models/weights/
+
+# Logs
+logs/
+*.log
+
+# Config with sensitive data
+config.local.yaml
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Game files
+*.exe
+*.dll
+
+# Test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride

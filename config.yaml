@@ -1,0 +1,67 @@
+# AssaultCube Aim-Assist Configuration
+
+game:
+  name: "AssaultCube"
+  resolution:
+    width: 1920
+    height: 1080
+  process_name: "ac_client.exe"
+
+aim_assist:
+  enabled: true
+  sensitivity: 1.2
+  smoothing: 0.7
+  prediction_frames: 3
+  max_distance: 2000
+  min_distance: 100
+  fov_degrees: 120
+  
+target_detection:
+  model: "yolov8n"  # yolov8n, yolov8s, yolov8m for better accuracy
+  confidence_threshold: 0.45
+  nms_threshold: 0.45
+  enable_gpu: true
+  batch_size: 1
+  
+aiming:
+  bone_priority: ["head", "neck", "chest"]  # AssaultCube player model bones
+  aim_smoothing_curve: "cubic"  # linear, cubic, exponential
+  randomness: 0.05  # 0-1, adds human-like jitter
+  reaction_delay_ms: 50  # Simulate human reaction time
+  flick_distance: 50  # Trigger flick behavior
+  
+input:
+  method: "mouse"  # mouse, hardware, controller
+  use_raw_input: true
+  interpolation: true
+  
+memory:
+  enable_esp: true
+  read_game_state: true
+  detect_wallhack: true
+  
+visuals:
+  show_detection_boxes: true
+  show_fov_circle: true
+  show_predictions: true
+  show_aimed_player: true
+  overlay_alpha: 0.7
+  debug_mode: false
+  
+hotkeys:
+  toggle_aim: "shift"  # Hold Shift to activate
+  toggle_esp: "alt"
+  toggle_overlay: "ctrl"
+  exit: "esc"
+  
+performance:
+  target_fps: 144
+  skip_frames: 1  # Process every Nth frame
+  use_multiprocessing: true
+  max_threads: 4
+  memory_cache_size: 256
+  
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "logs/aim_assist.log"
+  console_output: true
